@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for entry in entries %}
+<div class"entry">
+  <a href="/blog/{{entry.key().id()}}"><div class="entry-title">Title: {{entry.title}}</div></a>
+  <br>
+  <pre class="entry-body">  {{entry.body}}</pre>
+</div>
+<br>
+{% endfor %}
+{% endblock %}
